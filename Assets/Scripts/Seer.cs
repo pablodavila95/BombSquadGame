@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Seer : MonoBehaviour {
-    private int min;
-    private int max;
+    public static int min;
+    public static int max;
     private int guess;
     private LevelManager levelManager;
 
 
     public string easy;
     public string hard;
-    public int attempts;
+    public static int attempts;
     public Text guessLabel;
 
 	// Use this for initialization
@@ -24,8 +24,6 @@ public class Seer : MonoBehaviour {
 	
 
     void easyGame(){
-        min = 1;
-        max = 501;
         NextGuess();
     }
 
